@@ -7,6 +7,8 @@ import { ScrapperModule } from './scrapper/scrapper.module';
 @Module({
 	imports: [
 		GraphQLModule.forRoot({
+			introspection: true,
+			playground: true,
 			autoSchemaFile: 'schema.gql',
 		}),
 		ScrapperModule,
