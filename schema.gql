@@ -1,0 +1,19 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type ErrorDto {
+  path: String!
+  message: String!
+}
+
+type ScrapperDto {
+  title: String
+  description: String
+  largestImage: String
+  error: [ErrorDto!]
+}
+
+type Query {
+  parseUrl(url: String!): ScrapperDto!
+}
