@@ -19,6 +19,7 @@ export class ScrapperService {
 			console.log('payload', payload)
 			return payload
 		} catch (err) {
+			console.log(err)
 			return { error: [{ path: "parseUrl", message: "Unable to parse url" }] }
 		}
 	}
