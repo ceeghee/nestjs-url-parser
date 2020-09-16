@@ -2,7 +2,7 @@
 
 ## Description
 
-[NestUrlParser](https://github.com/nestjs/nest) Extract basic metadata like title, description and largest image from a url
+[NestUrlParser](https://nestjs-url-parser.herokuapp.com/graphql) Extract basic metadata like title, description and largest image from a url
 .
 
 ## Installation
