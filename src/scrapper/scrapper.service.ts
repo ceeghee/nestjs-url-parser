@@ -16,10 +16,8 @@ export class ScrapperService {
 			const largest_image = await this.getLargestImage(url)
 			const payload = { ...meta_data, ...largest_image }
 			this.saveToCache(url, payload)
-			console.log('payload', payload)
 			return payload
 		} catch (err) {
-			console.log(err)
 			return { error: [{ path: "parseUrl", message: "Unable to parse url" }] }
 		}
 	}
@@ -31,7 +29,7 @@ export class ScrapperService {
 		const largest_image = await page.evaluate(() => {
 			return [...document.getElementsByTagName('img')].sort((a, b) => b.naturalWidth * b.naturalHeight - a.naturalWidth * a.naturalHeight)[0].src;
 		});
-		console.log('largest image : ', largest_image)
+		browser.close();
 		return { largestImage: largest_image };
 
 	}
