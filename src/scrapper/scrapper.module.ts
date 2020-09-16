@@ -3,7 +3,6 @@ import { ScrapperResolver } from './scrapper.resolver';
 import { ScrapperService } from './scrapper.service';
 
 @Module({
-
-  providers: [ScrapperResolver, ScrapperService]
+	providers: [ScrapperResolver, ScrapperService]
 })
 export class ScrapperModule { }
